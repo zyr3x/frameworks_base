@@ -94,7 +94,7 @@ public class HwQcomRIL extends QualcommSharedRIL implements CommandsInterface {
         }
         if(!needsOldRilFeature("skipCdma")){
             int appIndex = -1;
-            if (mPhoneType == RILConstants.CDMA_PHONE && !skipCdmaSubcription) {
+            if (mPhoneType == RILConstants.CDMA_PHONE) {
                 appIndex = status.getCdmaSubscriptionAppIndex();
                 Log.d(LOG_TAG, "This is a CDMA PHONE " + appIndex);
             } else {
